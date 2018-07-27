@@ -15,8 +15,9 @@
 		FF219D98210B6FFF0052F6BE /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF219D97210B6FFF0052F6BE /* MovieController.swift */; };
 		FF219D9C210B76E60052F6BE /* MoviesTabBarViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF219D9B210B76E60052F6BE /* MoviesTabBarViewController.swift */; };
 		FF219D9E210B77230052F6BE /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF219D9D210B77230052F6BE /* AddMovieViewController.swift */; };
-		FF219DA0210B773A0052F6BE /* MovieListTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF219D9F210B773A0052F6BE /* MovieListTableViewController.swift */; };
 		FF219DA3210B77B70052F6BE /* MovieControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF219DA2210B77B70052F6BE /* MovieControllerProtocol.swift */; };
+		FF219DA6210B86390052F6BE /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF219DA5210B86390052F6BE /* MovieTableViewCell.swift */; };
+		FF219DA8210B92C40052F6BE /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF219DA7210B92C40052F6BE /* MoviesTableViewController.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,8 +31,9 @@
 		FF219D97210B6FFF0052F6BE /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
 		FF219D9B210B76E60052F6BE /* MoviesTabBarViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTabBarViewController.swift; sourceTree = "<group>"; };
 		FF219D9D210B77230052F6BE /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
-		FF219D9F210B773A0052F6BE /* MovieListTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieListTableViewController.swift; sourceTree = "<group>"; };
 		FF219DA2210B77B70052F6BE /* MovieControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieControllerProtocol.swift; sourceTree = "<group>"; };
+		FF219DA5210B86390052F6BE /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		FF219DA7210B92C40052F6BE /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -73,6 +75,7 @@
 				FF219D9A210B73D50052F6BE /* Storyboards */,
 				467E199520F5165900E7FF73 /* LaunchScreen.storyboard */,
 				FF219DA1210B777D0052F6BE /* View Controllers */,
+				FF219DA5210B86390052F6BE /* MovieTableViewCell.swift */,
 			);
 			path = "Movie List";
 			sourceTree = "<group>";
@@ -105,8 +108,8 @@
 			isa = PBXGroup;
 			children = (
 				FF219D9D210B77230052F6BE /* AddMovieViewController.swift */,
-				FF219D9F210B773A0052F6BE /* MovieListTableViewController.swift */,
 				FF219D9B210B76E60052F6BE /* MoviesTabBarViewController.swift */,
+				FF219DA7210B92C40052F6BE /* MoviesTableViewController.swift */,
 			);
 			path = "View Controllers";
 			sourceTree = "<group>";
@@ -191,11 +194,12 @@
 			buildActionMask = 2147483647;
 			files = (
 				FF219DA3210B77B70052F6BE /* MovieControllerProtocol.swift in Sources */,
-				FF219DA0210B773A0052F6BE /* MovieListTableViewController.swift in Sources */,
 				FF219D98210B6FFF0052F6BE /* MovieController.swift in Sources */,
 				FF219D95210B6F460052F6BE /* Movie.swift in Sources */,
 				FF219D9C210B76E60052F6BE /* MoviesTabBarViewController.swift in Sources */,
+				FF219DA8210B92C40052F6BE /* MoviesTableViewController.swift in Sources */,
 				FF219D9E210B77230052F6BE /* AddMovieViewController.swift in Sources */,
+				FF219DA6210B86390052F6BE /* MovieTableViewCell.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
