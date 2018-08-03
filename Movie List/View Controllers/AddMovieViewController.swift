@@ -9,13 +9,16 @@
 import UIKit
 
 class AddMovieViewController: UIViewController, MovieControllerProtocol {
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+    }
 
     @IBAction func tapToCreate(_ sender: Any) {
         guard let movie = addMovieTextField.text else { return }
         
         movieController?.createMovie(withName: movie)
     }
-
 
     var movieController: MovieController?
     

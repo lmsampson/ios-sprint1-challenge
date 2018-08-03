@@ -8,11 +8,18 @@
 
 import Foundation
 
-class Movie {
-    let movie: String
+class Movie: Equatable {
+    
+    var movie: String
     var isSeen: Bool = false
     
     init(movie: String) {
         self.movie = movie
     }
+    
+    static func == (lhs: Movie, rhs: Movie) -> Bool {
+        return lhs.movie == rhs.movie &&
+            lhs.isSeen == rhs.isSeen
+    }
+    
 }

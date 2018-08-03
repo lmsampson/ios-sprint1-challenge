@@ -19,35 +19,38 @@ class MoviesTableViewController: UIViewController, UITableViewDelegate, UITableV
         
         guard let movieCell = cell as? MovieTableViewCell else { return cell }
         
-       // let movie = movieController?.movies[indexPath.row]
-       // movieCell.movie = movie
+        let movie = movieController?.movies[indexPath.row]
+        movieCell.movie = movie
         movieCell.delegate = self
         
         return movieCell
     }
 
     func isSeenButtonWasTapped(on cell: MovieTableViewCell) {
-        
+        guard let indexPath = movieTableView.indexPath(for: cell) else { return }
+        guard let movie = cell.movie else { return }
+
+        movieController?.toggleIsSeen(for: movie)
+        movieTableView.reloadRows(at: [indexPath], with: UITableViewRowAnimation.automatic)
     }
     
     override func viewDidLoad() {
         super.viewDidLoad()
-       
+        movieTableView.dataSource = self
+        movieTableView.delegate = self
     }
     
-    /*
-     // Override to support editing the table view.
-     override func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
-     if editingStyle == .delete {
-     // Delete the row from the data source
-     tableView.deleteRows(at: [indexPath], with: .fade)
-     } else if editingStyle == .insert {
-     // Create a new instance of the appropriate class, insert it into the array, and add a new row to the table view
-     }
-     }
-     */
+    func tableView(_ tableView: UITableView, commit editingStyle: UITableViewCellEditingStyle, forRowAt indexPath: IndexPath) {
+        if editingStyle == .delete {
+            guard let movie = movieController?.movies[indexPath.row] else { return }
+            movieController?.delete(movie: movie)
+            tableView.deleteRows(at: [indexPath], with: .fade)
+        }
+    }
     
     
     var movieController: MovieController?
+    
+    @IBOutlet weak var movieTableView: UITableView!
     
 }

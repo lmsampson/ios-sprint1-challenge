@@ -99,16 +99,16 @@
                                             <rect key="frame" x="0.0" y="0.0" width="375" height="43.5"/>
                                             <autoresizingMask key="autoresizingMask"/>
                                             <subviews>
-                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" misplaced="YES" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiX-vH-HdR">
+                                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="iiX-vH-HdR">
                                                     <rect key="frame" x="15" y="11" width="237" height="21"/>
                                                     <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                                     <nil key="textColor"/>
                                                     <nil key="highlightedColor"/>
                                                 </label>
-                                                <button opaque="NO" contentMode="scaleToFill" misplaced="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUi-J7-2mn">
-                                                    <rect key="frame" x="314" y="6" width="46" height="30"/>
+                                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="right" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="PUi-J7-2mn">
+                                                    <rect key="frame" x="260" y="6" width="100" height="30"/>
                                                     <constraints>
-                                                        <constraint firstAttribute="width" constant="46" id="Atl-EG-OSD"/>
+                                                        <constraint firstAttribute="width" constant="100" id="Atl-EG-OSD"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
                                                     <connections>
@@ -117,11 +117,11 @@
                                                 </button>
                                             </subviews>
                                             <constraints>
-                                                <constraint firstItem="iiX-vH-HdR" firstAttribute="leading" secondItem="hdX-cW-UXZ" secondAttribute="leadingMargin" constant="-1" id="LWI-0T-gzY"/>
+                                                <constraint firstItem="iiX-vH-HdR" firstAttribute="leading" secondItem="hdX-cW-UXZ" secondAttribute="leadingMargin" id="LWI-0T-gzY"/>
                                                 <constraint firstItem="iiX-vH-HdR" firstAttribute="centerY" secondItem="PUi-J7-2mn" secondAttribute="centerY" id="NEa-Eu-GmW"/>
                                                 <constraint firstItem="PUi-J7-2mn" firstAttribute="centerY" secondItem="hdX-cW-UXZ" secondAttribute="centerY" id="Z4H-f7-n2K"/>
-                                                <constraint firstItem="PUi-J7-2mn" firstAttribute="leading" secondItem="iiX-vH-HdR" secondAttribute="trailing" constant="62" id="j3E-wh-h1Y"/>
-                                                <constraint firstAttribute="trailingMargin" secondItem="PUi-J7-2mn" secondAttribute="trailing" constant="-1" id="uUX-Ul-eV2"/>
+                                                <constraint firstItem="PUi-J7-2mn" firstAttribute="leading" secondItem="iiX-vH-HdR" secondAttribute="trailing" constant="8" id="j3E-wh-h1Y"/>
+                                                <constraint firstAttribute="trailingMargin" secondItem="PUi-J7-2mn" secondAttribute="trailing" id="uUX-Ul-eV2"/>
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
@@ -136,6 +136,9 @@
                         <viewLayoutGuide key="safeArea" id="3TF-yj-NvR"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" image="Clapboard" id="oQl-A5-Hzq"/>
+                    <connections>
+                        <outlet property="movieTableView" destination="czX-qF-357" id="OSG-tO-Du6"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="u45-tw-Pu8" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
