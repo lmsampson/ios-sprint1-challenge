@@ -19,7 +19,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" text="Enter the movie's title:" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rwK-3l-h1u">
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Enter the movie's title:" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="rwK-3l-h1u">
                                 <rect key="frame" x="18" y="119" width="339" height="30"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="18"/>
@@ -111,6 +111,9 @@
                                                         <constraint firstAttribute="width" constant="46" id="Atl-EG-OSD"/>
                                                     </constraints>
                                                     <state key="normal" title="Button"/>
+                                                    <connections>
+                                                        <action selector="isSeenWasTapped:" destination="eOB-x9-wfM" eventType="touchUpInside" id="OGS-hW-QGt"/>
+                                                    </connections>
                                                 </button>
                                             </subviews>
                                             <constraints>
@@ -121,6 +124,10 @@
                                                 <constraint firstAttribute="trailingMargin" secondItem="PUi-J7-2mn" secondAttribute="trailing" constant="-1" id="uUX-Ul-eV2"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="isSeenButton" destination="PUi-J7-2mn" id="1aC-Bb-hst"/>
+                                            <outlet property="movieLabel" destination="iiX-vH-HdR" id="JMw-Lv-8h0"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>

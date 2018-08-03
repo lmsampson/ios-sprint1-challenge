@@ -14,7 +14,7 @@ protocol MovieTableViewCellDelegate: class {
     
 class MovieTableViewCell: UITableViewCell {
     
-   /* private func updateViews() {
+    private func updateViews() {
         guard let movie = movie else { return }
         
         if movie.isSeen == false {
@@ -23,10 +23,25 @@ class MovieTableViewCell: UITableViewCell {
             isSeenButton.setTitle("Seen", for: .normal)
         }
         
+        movieLabel.text = movie.movie
+        
     }
-    */
+    
+    @IBAction func isSeenWasTapped(_ sender: Any) {
+        delegate?.isSeenButtonWasTapped(on: self)
+    }
+    
+    var movie: Movie? {
+        didSet {
+            updateViews()
+        }
+    }
     
     weak var delegate: MovieTableViewCellDelegate?
+    
+    @IBOutlet weak var movieLabel: UILabel!
+    @IBOutlet weak var isSeenButton: UIButton!
+    
     
 }
 
