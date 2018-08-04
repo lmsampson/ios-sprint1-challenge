@@ -18,6 +18,8 @@ class AddMovieViewController: UIViewController, MovieControllerProtocol {
         guard let movie = addMovieTextField.text else { return }
         
         movieController?.createMovie(withName: movie)
+        
+        addMovieTextField.text = ""
     }
 
     var movieController: MovieController?

@@ -14,6 +14,9 @@ class MovieController {
         let movie = Movie(movie: movie)
         
         movies.append(movie)
+        movies.sort { (leftMovie, rightMovie) -> Bool in
+            return leftMovie.movie < rightMovie.movie
+        }
     }
     
     func toggleIsSeen(for movie: Movie) {
