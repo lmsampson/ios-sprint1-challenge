@@ -58,6 +58,7 @@ class MoviesTableViewController: UIViewController, UITableViewDataSource, UITabl
         
         let movie = filteredMovies?[indexPath.row]
         movieCell.movie = movie
+        movieCell.delegate = self
                 
         return movieCell
     }
