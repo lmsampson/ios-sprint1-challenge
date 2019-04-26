@@ -19,6 +19,7 @@
 		FF210EAC22735BC500804F07 /* MoviesTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EAB22735BC500804F07 /* MoviesTabBarController.swift */; };
 		FF210EAE22735BDC00804F07 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EAD22735BDC00804F07 /* MovieTableViewCell.swift */; };
 		FF210EB022735BF700804F07 /* MovieControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EAF22735BF700804F07 /* MovieControllerProtocol.swift */; };
+		FF210EB2227373A900804F07 /* PersistenceExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EB1227373A900804F07 /* PersistenceExtension.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -36,6 +37,7 @@
 		FF210EAB22735BC500804F07 /* MoviesTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTabBarController.swift; sourceTree = "<group>"; };
 		FF210EAD22735BDC00804F07 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
 		FF210EAF22735BF700804F07 /* MovieControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieControllerProtocol.swift; sourceTree = "<group>"; };
+		FF210EB1227373A900804F07 /* PersistenceExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersistenceExtension.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -121,6 +123,7 @@
 			isa = PBXGroup;
 			children = (
 				FF210EA52273587700804F07 /* MovieController.swift */,
+				FF210EB1227373A900804F07 /* PersistenceExtension.swift */,
 			);
 			path = "Model Controller";
 			sourceTree = "<group>";
@@ -220,6 +223,7 @@
 				FF210EA62273587700804F07 /* MovieController.swift in Sources */,
 				FF210EA42273586800804F07 /* Movie.swift in Sources */,
 				FF210EAA22735B7E00804F07 /* AddMovieViewController.swift in Sources */,
+				FF210EB2227373A900804F07 /* PersistenceExtension.swift in Sources */,
 				FF210EB022735BF700804F07 /* MovieControllerProtocol.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,
 			);

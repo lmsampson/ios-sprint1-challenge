@@ -8,7 +8,7 @@
 
 import Foundation
 
-class Movie: Equatable {
+class Movie: Equatable, Codable {
     
     var movie: String
     var isSeen: Bool = false

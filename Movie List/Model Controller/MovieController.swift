@@ -11,7 +11,11 @@ import Foundation
 class MovieController {
     
     // MARK: - Properties
-    private(set) var movies: [Movie] = []
+    var movies: [Movie] = []
+    
+    init() {
+        loadFromPersistence()
+    }
     
     // MARK: - CRUD
     
@@ -22,11 +26,15 @@ class MovieController {
         movies.sort { (leftMovie, rightMovie) -> Bool in
             return leftMovie.movie < rightMovie.movie
         }
+        
+        saveToPersistence()
     }
     
     func delete(movie: Movie) {
         guard let index = movies.index(of: movie) else { return }
         movies.remove(at: index)
+        
+        saveToPersistence()
     }
     
     func toggleIsSeen(for movie: Movie) {
@@ -35,5 +43,7 @@ class MovieController {
         } else {
             movie.isSeen = false
         }
+        
+        saveToPersistence()
     }
 }
