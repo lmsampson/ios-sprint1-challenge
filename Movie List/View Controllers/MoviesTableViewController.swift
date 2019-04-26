@@ -67,6 +67,7 @@ class MoviesTableViewController: UIViewController, UITableViewDataSource, UITabl
         if editingStyle == .delete {
             guard let movie = filteredMovies?[indexPath.row] else { return }
             movieController?.delete(movie: movie)
+            filteredMovies = movieController?.movies
             tableView.deleteRows(at: [indexPath], with: .fade)
         }
     }
