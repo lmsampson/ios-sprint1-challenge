@@ -12,6 +12,13 @@
 		467E199420F5165900E7FF73 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 467E199320F5165900E7FF73 /* Assets.xcassets */; };
 		8E5B3916218CDD4D00AB9C2B /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */; };
 		8E5B3917218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */; };
+		FF210EA42273586800804F07 /* Movie.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EA32273586800804F07 /* Movie.swift */; };
+		FF210EA62273587700804F07 /* MovieController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EA52273587700804F07 /* MovieController.swift */; };
+		FF210EA822735B6700804F07 /* MoviesTableViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EA722735B6700804F07 /* MoviesTableViewController.swift */; };
+		FF210EAA22735B7E00804F07 /* AddMovieViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EA922735B7E00804F07 /* AddMovieViewController.swift */; };
+		FF210EAC22735BC500804F07 /* MoviesTabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EAB22735BC500804F07 /* MoviesTabBarController.swift */; };
+		FF210EAE22735BDC00804F07 /* MovieTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EAD22735BDC00804F07 /* MovieTableViewCell.swift */; };
+		FF210EB022735BF700804F07 /* MovieControllerProtocol.swift in Sources */ = {isa = PBXBuildFile; fileRef = FF210EAF22735BF700804F07 /* MovieControllerProtocol.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -22,6 +29,13 @@
 		467E199820F5165900E7FF73 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = LaunchScreen.storyboard; sourceTree = "<group>"; };
 		8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = LambdaLogoAssets.xcassets; sourceTree = "<group>"; };
+		FF210EA32273586800804F07 /* Movie.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Movie.swift; sourceTree = "<group>"; };
+		FF210EA52273587700804F07 /* MovieController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieController.swift; sourceTree = "<group>"; };
+		FF210EA722735B6700804F07 /* MoviesTableViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTableViewController.swift; sourceTree = "<group>"; };
+		FF210EA922735B7E00804F07 /* AddMovieViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AddMovieViewController.swift; sourceTree = "<group>"; };
+		FF210EAB22735BC500804F07 /* MoviesTabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MoviesTabBarController.swift; sourceTree = "<group>"; };
+		FF210EAD22735BDC00804F07 /* MovieTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieTableViewCell.swift; sourceTree = "<group>"; };
+		FF210EAF22735BF700804F07 /* MovieControllerProtocol.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MovieControllerProtocol.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -54,14 +68,77 @@
 		467E198B20F5165700E7FF73 /* Movie List */ = {
 			isa = PBXGroup;
 			children = (
+				FF210EA02273583400804F07 /* Model */,
+				FF210E9F2273582C00804F07 /* Protocols */,
+				FF210E9E2273582300804F07 /* Model Controller */,
+				FF210E9D2273581B00804F07 /* Views */,
+				FF210E9C227357FD00804F07 /* View Controllers */,
+				FF210E9B227357F000804F07 /* Storyboards */,
+				FF210E9A227357C900804F07 /* Resources */,
+			);
+			path = "Movie List";
+			sourceTree = "<group>";
+		};
+		FF210E9A227357C900804F07 /* Resources */ = {
+			isa = PBXGroup;
+			children = (
+				8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */,
 				467E198C20F5165800E7FF73 /* AppDelegate.swift */,
 				467E199320F5165900E7FF73 /* Assets.xcassets */,
 				467E199820F5165900E7FF73 /* Info.plist */,
+			);
+			path = Resources;
+			sourceTree = "<group>";
+		};
+		FF210E9B227357F000804F07 /* Storyboards */ = {
+			isa = PBXGroup;
+			children = (
 				467E199020F5165800E7FF73 /* Main.storyboard */,
-				8E5B3915218CDD4D00AB9C2B /* LambdaLogoAssets.xcassets */,
 				8E5B3914218CDD4D00AB9C2B /* LaunchScreen.storyboard */,
 			);
-			path = "Movie List";
+			path = Storyboards;
+			sourceTree = "<group>";
+		};
+		FF210E9C227357FD00804F07 /* View Controllers */ = {
+			isa = PBXGroup;
+			children = (
+				FF210EA722735B6700804F07 /* MoviesTableViewController.swift */,
+				FF210EA922735B7E00804F07 /* AddMovieViewController.swift */,
+				FF210EAB22735BC500804F07 /* MoviesTabBarController.swift */,
+			);
+			path = "View Controllers";
+			sourceTree = "<group>";
+		};
+		FF210E9D2273581B00804F07 /* Views */ = {
+			isa = PBXGroup;
+			children = (
+				FF210EAD22735BDC00804F07 /* MovieTableViewCell.swift */,
+			);
+			path = Views;
+			sourceTree = "<group>";
+		};
+		FF210E9E2273582300804F07 /* Model Controller */ = {
+			isa = PBXGroup;
+			children = (
+				FF210EA52273587700804F07 /* MovieController.swift */,
+			);
+			path = "Model Controller";
+			sourceTree = "<group>";
+		};
+		FF210E9F2273582C00804F07 /* Protocols */ = {
+			isa = PBXGroup;
+			children = (
+				FF210EAF22735BF700804F07 /* MovieControllerProtocol.swift */,
+			);
+			path = Protocols;
+			sourceTree = "<group>";
+		};
+		FF210EA02273583400804F07 /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				FF210EA32273586800804F07 /* Movie.swift */,
+			);
+			path = Model;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -137,6 +214,13 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				FF210EAC22735BC500804F07 /* MoviesTabBarController.swift in Sources */,
+				FF210EA822735B6700804F07 /* MoviesTableViewController.swift in Sources */,
+				FF210EAE22735BDC00804F07 /* MovieTableViewCell.swift in Sources */,
+				FF210EA62273587700804F07 /* MovieController.swift in Sources */,
+				FF210EA42273586800804F07 /* Movie.swift in Sources */,
+				FF210EAA22735B7E00804F07 /* AddMovieViewController.swift in Sources */,
+				FF210EB022735BF700804F07 /* MovieControllerProtocol.swift in Sources */,
 				467E198D20F5165800E7FF73 /* AppDelegate.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
