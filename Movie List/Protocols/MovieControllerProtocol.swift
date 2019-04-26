@@ -7,3 +7,7 @@
 //
 
 import Foundation
+
+protocol MovieControllerProtocol: AnyObject {
+    var movieController: MovieController? { get set }
+}

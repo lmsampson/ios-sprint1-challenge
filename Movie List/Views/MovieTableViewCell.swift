@@ -8,17 +8,38 @@
 
 import UIKit
 
+protocol MovieTableViewCellDelegate: AnyObject {
+    func isSeenButtonWasTapped(on cell: MovieTableViewCell)
+}
+
 class MovieTableViewCell: UITableViewCell {
 
-    override func awakeFromNib() {
-        super.awakeFromNib()
-        // Initialization code
+    // MARK: - Properties and Outlets
+    weak var delegate: MovieTableViewCellDelegate?
+    var movie: Movie? {
+        didSet {
+            updateViews()
+        }
     }
-
-    override func setSelected(_ selected: Bool, animated: Bool) {
-        super.setSelected(selected, animated: animated)
-
-        // Configure the view for the selected state
+    
+    @IBOutlet weak var movieLabel: UILabel!
+    @IBOutlet weak var isSeenButton: UIButton!
+    
+    // MARK: - Methods
+    func updateViews() {
+        guard let movie = movie else { return }
+        
+        if movie.isSeen == false {
+            isSeenButton.setTitle("Not Seen", for: .normal)
+        } else {
+            isSeenButton.setTitle("Seen", for: .normal)
+        }
+        
+        movieLabel.text = movie.movie
     }
-
+    
+    @IBAction func isSeenButtonWasTapped(_ sender: Any) {
+        delegate?.isSeenButtonWasTapped(on: self)
+    }
+    
 }

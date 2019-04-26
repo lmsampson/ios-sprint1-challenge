@@ -22,7 +22,7 @@
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="618"/>
                                 <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <prototypes>
-                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" rowHeight="55" id="eQc-GP-DlD">
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" preservesSuperviewLayoutMargins="YES" selectionStyle="default" indentationWidth="10" reuseIdentifier="MovieCell" rowHeight="55" id="eQc-GP-DlD" customClass="MovieTableViewCell" customModule="Movie_List" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="28" width="375" height="55"/>
                                         <autoresizingMask key="autoresizingMask"/>
                                         <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" preservesSuperviewLayoutMargins="YES" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="eQc-GP-DlD" id="ody-Kb-XCr">
@@ -41,6 +41,9 @@
                                                         <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" ambiguous="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="GdL-61-udU">
                                                             <rect key="frame" x="313" y="0.0" width="46" height="38.5"/>
                                                             <state key="normal" title="Button"/>
+                                                            <connections>
+                                                                <action selector="isSeenButtonWasTapped:" destination="eQc-GP-DlD" eventType="touchUpInside" id="2Fe-qa-ZlM"/>
+                                                            </connections>
                                                         </button>
                                                     </subviews>
                                                 </stackView>
@@ -52,6 +55,10 @@
                                                 <constraint firstAttribute="trailing" secondItem="SI7-hh-Y8M" secondAttribute="trailing" constant="8" id="y6G-HM-duU"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <connections>
+                                            <outlet property="isSeenButton" destination="GdL-61-udU" id="qni-er-7vO"/>
+                                            <outlet property="movieLabel" destination="Kz5-eg-tOP" id="j6i-Zx-fSr"/>
+                                        </connections>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
@@ -66,6 +73,9 @@
                         <viewLayoutGuide key="safeArea" id="my5-1V-gvu"/>
                     </view>
                     <tabBarItem key="tabBarItem" title="Movies" image="Clapboard" id="TsI-CM-MJe"/>
+                    <connections>
+                        <outlet property="tableView" destination="eUK-oA-nsO" id="Mjr-nM-sXQ"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ip0-L2-xAB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
